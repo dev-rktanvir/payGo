@@ -6,18 +6,18 @@ document.getElementById("login-btn")
 
         // Validation
 
-        if (mobileNumber.length !== 11 || isNaN(mobileNumber)) {
-            alert("Type only 11 digit number");
-            return;
+        if (mobileNumber.length === 11 && !isNaN(mobileNumber)) {
+            
+            if (pinNumber.length === 4) {
+                window.location.href = "/src/page/home.html"
+            }
+            else {
+                
+                alert('Pin must be 4 digit');
+            }
         }
-        else if (pinNumber.length !== 4) {
-            alert('Pin must be 4 digit');
-            return;
-        }
-        else if(mobileNumber && pinNumber){
-            window.location.href="/src/page/home.html"
-        }
-        else{
-            alert("Fillup Mobile Number and Pin Number");
+
+        else {
+            alert("First Type only 11 digit mobile number");
         }
     })

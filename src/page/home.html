@@ -5,17 +5,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PayGo - Home</title>
+    <!-- Css -->
+    <link rel="stylesheet" href="/src/style.css">
 </head>
 
-<body>
-    <!-- Header -->
-    <header>
-        <h1>yes........</h1>
-    </header>
+<body class="outfit-font bg-black">
     <!-- Main -->
-    <main>
+    <main class="bg-base-200 max-w-md mx-auto">
+        <!-- Nav -->
+        <nav class="bg-white flex items-center justify-between p-6 border-b border-secondary/10">
+            <!-- left side -->
+            <div class="flex items-center gap-3">
+                <img class="w-12" src="/assets/Group.png" alt="">
+                <!-- Amount -->
+                <div>
+                    <h3 class="font-extrabold text-lg text-secondary">$<span id="total-money">45000</span></h3>
+                    <p class="text-sm text-secondary/50">Available Balance</p>
+                </div>
+            </div>
+            <!-- Right side -->
+            <div>
+                <button id="logout-btn"
+                    class="rounded-lg px-3 py-2 border border-secondary/10 text-sm text-secondary/50 cursor-pointer flex gap-3 items-center"><img
+                        src="/assets/Frame.png" alt="">Log Out</button>
+            </div>
+        </nav>
+
+        <!-- content section -->
+        <section class="p-6 bg-white">
+            <h1 class="font-bold text-2xl text-secondary">Welcome To PayGo!</h1>
+            <p class="text-base leading-6 text-secondary/50 mt-3">
+                Enjoy easy and convenient financial services with us. Cashout charge is low and
+            </p>
+            <!-- Cards -->
+            <div class="grid grid-cols-3 gap-3 items-center mt-6">
+                <!-- card -1 -->
+                <div class="rounded-xl px-3 py-5 border border-secondary/10 text-center cursor-pointer">
+                    <img class="mx-auto" src="/assets/wallet1.png" alt="">
+                    <p class="text-sm text-secondary/70 mt-3">Add Money</p>
+                </div>
+                <!-- card -2 -->
+                <div class="rounded-xl px-3 py-5 border border-secondary/10 text-center cursor-pointer">
+                    <img class="mx-auto" src="/assets/send1.png" alt="">
+                    <p class="text-sm text-secondary/70 mt-3">Cashout</p>
+                </div>
+                <!-- card -3 -->
+                <div class="rounded-xl px-3 py-5 border border-secondary/10 text-center cursor-pointer">
+                    <img class="mx-auto" src="/assets/money1.png" alt="">
+                    <p class="text-sm text-secondary/70 mt-3">Transfer Money</p>
+                </div>
+                <!-- card -4 -->
+                <div class="rounded-xl px-3 py-5 border border-secondary/10 text-center cursor-pointer">
+                    <img class="mx-auto" src="/assets/bonus1.png" alt="">
+                    <p class="text-sm text-secondary/70 mt-3">Get Bonus</p>
+                </div>
+                <!-- card -5 -->
+                <div class="rounded-xl px-3 py-5 border border-secondary/10 text-center cursor-pointer">
+                    <img class="mx-auto" src="/assets/purse1.png" alt="">
+                    <p class="text-sm text-secondary/70 mt-3">Pay Bill</p>
+                </div>
+                <!-- card -6 -->
+                <div class="rounded-xl px-3 py-5 border border-secondary/10 text-center cursor-pointer">
+                    <img class="mx-auto" src="/assets/transaction1.png" alt="">
+                    <p class="text-sm text-secondary/70 mt-3">Transactions</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add Money section -->
+        <section class="p-6">
+            <h3 class="font-semibold text-lg text-secondary mb-4">Add Money</h3>
+            <form class="bg-white rounded-3xl p-8 flex flex-col gap-4">
+                <label class="font-medium text-base text-secondary" for="">Select A Bank</label>
+                <select class="rounded-4xl px-5 py-4 bg-base-200" name="" id="">
+                    <option disabled selected value="">Select A Bank</option>
+                    <option value="bkash">Bkash</option>
+                    <option value="nagad">Nagad</option>
+                    <option value="rocket">Rocket</option>
+                    <option value="upay">Upay</option>
+                </select>
+
+
+                <label class="font-medium text-base text-secondary" for="">Account Number</label>
+                <input class="rounded-4xl px-5 py-4 bg-base-200" type="text" placeholder="Enter Your Number"
+                    inputmode="numeric" maxlength="11" name="" id="account-number" value="01680523960">
+
+                <label class="font-medium text-base text-secondary" for="">Amount To Add</label>
+                <input class="rounded-4xl px-5 py-4 bg-base-200" type="text" placeholder="Enter Amount"
+                    inputmode="numeric" name="" id="add-amount">
+
+                <label class="font-medium text-base text-secondary" for="">Pin Number</label>
+                <input class="rounded-4xl px-5 py-4 bg-base-200" type="password" placeholder="Enter 4 Digit Pin"
+                    maxlength="4" required name="" id="pinn-number" value="1234">
+
+                <button id="add-money"
+                    class="bg-primary text-white rounded-4xl px-5 py-3 font-semibold text-xl cursor-pointer"
+                    type="submit">Add Money</button>
+            </form>
+        </section>
 
     </main>
+    <!-- Script -->
+    <script src="/src/js/home.js"></script>
 </body>
 
 </html>
