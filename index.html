@@ -6,14 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PayGo - MFS</title>
   <!-- CSS File -->
-   <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" href="/src/style.css">
 </head>
 
-<body class="outfit-font">
+<body class="outfit-font bg-black">
   <!-- Main -->
-  <main>
-    <h1>Tanvir Ahmed</h1>
+  <main class="max-w-xl mx-auto bg-slate-200">
+
+    <!-- HOME Page Content -->
+    <section class=" flex flex-col items-center justify-center h-screen">
+
+      <!-- Logo Part -->
+      <div class="flex flex-col justify-center items-center relative">
+        <img src="/src/assets/bg.png" alt="">
+        <img class="absolute top-10" src="/src/assets/Group.png" alt="">
+      </div>
+
+      <!-- Login Part -->
+      <div class="w-5/6 p-8 rounded-3xl bg-white -mt-28 z-20">
+
+        <form class="flex flex-col gap-4">
+          <!-- Mobile Number -->
+          <div class="flex flex-col gap-3">
+            <label class="text-[#080808] font-medium">Mobile Number</label>
+            <input id="mobile-number" class="px-5 py-4 rounded-4xl bg-[#F4F5F7] text-[#080808] font-light" type="text" required value="01680523960"
+              placeholder="Enter Your Number">
+          </div>
+
+          <!-- Pin Number -->
+          <div class="flex flex-col gap-3">
+            <label class="text-[#080808] font-medium">4 Digit Pin</label>
+            <input id="pin-number" class="px-5 py-4 rounded-4xl bg-[#F4F5F7] text-[#080808] font-light" type="password" required value="1234"
+              placeholder="Enter 4 Digit Pin">
+          </div>
+          <div>
+            <button id="login-btn" class="bg-[#0874F2] text-white px-5 py-3 rounded-4xl w-full font-semibold text-xl cursor-pointer"
+              type="submit">Login</button>
+          </div>
+        </form>
+
+      </div>
+
+    </section>
   </main>
+
+  <!-- Js File -->
+  <script src="/src/payGo.js"></script>
 </body>
 
 </html>
